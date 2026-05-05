@@ -1,0 +1,22 @@
+{
+  "name": "ai-local-market-research-analyst",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "backend:dev": "cd backend && uvicorn main:app --reload",
+    "frontend:dev": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "db:migrate": "cd backend && alembic upgrade head",
+    "db:makemigrations": "cd backend && alembic revision --autogenerate -m \"Migration\"",
+    "test:backend": "cd backend && pytest",
+    "test:frontend": "cd frontend && npm test",
+    "lint:backend": "cd backend && black . && isort .",
+    "lint:frontend": "cd frontend && npm run lint",
+    "format": "npm run lint:backend && npm run lint:frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
