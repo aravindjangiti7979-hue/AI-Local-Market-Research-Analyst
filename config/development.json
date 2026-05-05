@@ -1,0 +1,32 @@
+{
+  "environment": "development",
+  "debug": true,
+  "api": {
+    "base_url": "http://localhost:8000",
+    "timeout": 30000,
+    "retry_attempts": 3
+  },
+  "analytics": {
+    "enabled": false,
+    "provider": "none"
+  },
+  "logging": {
+    "level": "debug",
+    "file": "logs/development.log"
+  },
+  "features": {
+    "real_time_updates": true,
+    "export_reports": true,
+    "batch_analysis": true,
+    "api_rate_limits": false
+  },
+  "cache": {
+    "enabled": true,
+    "ttl": 300,
+    "max_size": 100
+  },
+  "security": {
+    "require_https": false,
+    "cors_origins": ["http://localhost:3000", "http://localhost:8000"]
+  }
+}

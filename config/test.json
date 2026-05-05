@@ -1,0 +1,35 @@
+{
+  "environment": "test",
+  "debug": true,
+  "api": {
+    "base_url": "http://localhost:8000",
+    "timeout": 5000,
+    "retry_attempts": 1
+  },
+  "analytics": {
+    "enabled": false,
+    "provider": "none"
+  },
+  "logging": {
+    "level": "error",
+    "file": "logs/test.log"
+  },
+  "features": {
+    "real_time_updates": false,
+    "export_reports": false,
+    "batch_analysis": false,
+    "api_rate_limits": false
+  },
+  "cache": {
+    "enabled": false,
+    "ttl": 60,
+    "max_size": 10
+  },
+  "security": {
+    "require_https": false,
+    "cors_origins": ["http://localhost:3000"]
+  },
+  "database": {
+    "test_url": "postgresql://test_user:test_password@localhost:5432/market_research_test"
+  }
+}

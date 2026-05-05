@@ -1,0 +1,44 @@
+{
+  "environment": "production",
+  "debug": false,
+  "api": {
+    "base_url": "https://api.marketresearch.example.com",
+    "timeout": 10000,
+    "retry_attempts": 2
+  },
+  "analytics": {
+    "enabled": true,
+    "provider": "google_analytics",
+    "tracking_id": "UA-XXXXX-Y"
+  },
+  "logging": {
+    "level": "warn",
+    "file": "logs/production.log",
+    "sentry_dsn": "https://your-sentry-dsn.ingest.sentry.io/your-project-id"
+  },
+  "features": {
+    "real_time_updates": true,
+    "export_reports": true,
+    "batch_analysis": false,
+    "api_rate_limits": true
+  },
+  "cache": {
+    "enabled": true,
+    "ttl": 1800,
+    "max_size": 1000
+  },
+  "security": {
+    "require_https": true,
+    "cors_origins": ["https://marketresearch.example.com"],
+    "rate_limiting": {
+      "enabled": true,
+      "requests_per_minute": 60,
+      "requests_per_day": 1000
+    }
+  },
+  "monitoring": {
+    "enabled": true,
+    "health_check_interval": 60,
+    "metrics_endpoint": "/metrics"
+  }
+}

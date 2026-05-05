@@ -1,0 +1,23 @@
+{
+  "name": "ai-market-research-backend",
+  "version": "1.0.0",
+  "description": "FastAPI backend for AI Local Market Research Analyst",
+  "main": "main.py",
+  "scripts": {
+    "dev": "uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "start": "uvicorn main:app --host 0.0.0.0 --port 8000",
+    "test": "pytest",
+    "lint": "black . && isort . && flake8",
+    "format": "black . && isort .",
+    "migrate": "alembic upgrade head",
+    "makemigrations": "alembic revision --autogenerate -m",
+    "downgrade": "alembic downgrade -1"
+  },
+  "keywords": ["fastapi", "python", "ai", "market-research"],
+  "author": "Market Research Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
